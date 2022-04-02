@@ -1,0 +1,5 @@
+<?php
+
+// değişkenler $ ile oluşturulur.
+
+?>
