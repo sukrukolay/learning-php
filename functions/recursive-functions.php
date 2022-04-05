@@ -50,7 +50,7 @@ function anafonksiyon()
 
  echo "<br>";
 
- 
+
 // deneme dizi recursive
 
 $array = array
@@ -76,5 +76,52 @@ function dizim($a)
 }
 
 echo dizim($array);
+echo "<br>";
 
+
+// fonksiyonu başka fonk. a gönderme
+function altaGonder($operator,$sayi)
+{
+
+    if($operator == "topla")
+    {
+        $gonder = 1;
+    }
+    if($operator == "cikar")
+    {
+        $gonder = 2;
+    }
+    if($operator == "carp")
+    {
+        $gonder = 3;
+    }
+    if($operator == "bol")
+    {
+        $gonder = 4;
+    }
+
+    return hallet($gonder,$sayi); //kodlar yukarıdan aşağıya işlenir. return statement ı görünce orada kesilir.
+} 
+
+function hallet($gelen,$sayi)
+{
+    if($gelen == 1)
+    {
+        return $sayi+10;
+    }
+    if($gelen == 2)
+    {
+        return $sayi-10;
+    }
+    if($gelen == 3)
+    {
+        return $sayi*10;
+    }
+    if($gelen == 4)
+    {
+        return $sayi/10;
+    }
+}
+
+echo altaGonder("bol",78);
 ?>
