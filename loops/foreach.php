@@ -23,4 +23,5 @@ foreach($names as $index => $name)  // $index=>$name demek index ve değeri ifad
 ..
 .
 */
+  
 ?>
