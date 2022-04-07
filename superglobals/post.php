@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="get-sonuc.php" method ="get">  <!--action kısmı gideceği yeri ifade eder-->
+    <form action="post-sonuc.php" method ="post">  <!--action kısmı gideceği yeri ifade eder-->
         Isim: <input type="text" name="isim"><br/>
         Soyisim: <input type="text" name="soyIsim"><br/>
         <input type="submit" value="Gönder">
