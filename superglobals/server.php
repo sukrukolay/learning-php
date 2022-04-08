@@ -16,4 +16,5 @@
     echo "<br>";
     echo "REQUEST URL: ".$_SERVER['REQUEST_URI']; //Çalışmakta olan PHP dosyasının URI değerini verir.
     echo "<br>";
+    echo "REQUEST METHOD: ".$_SERVER["REQUEST_METHOD"] //PHP sayfasına erişim için kullanılan yöntemi verir (get, post gibi)
 ?>
