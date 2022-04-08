@@ -7,7 +7,7 @@ istekler ve form işleme işlemleri için kullanılmaktadır.
 GET VE POST' un yaptıklarını tek başına yapabilir.
 */
 
-    $gelenAd    = $_REQUEST["isim"];
-    $gelenSoyad = $_REQUEST["soyIsim"]; 
+    $gelenAd    = $_POST["isim"];
+    $gelenSoyad = $_POST["soyIsim"]; 
     echo $gelenAd." " .$gelenSoyad;
 ?>
