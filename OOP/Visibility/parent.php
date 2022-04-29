@@ -30,7 +30,7 @@
         }
 
         $Nesne = new Iki;
-        echo $Nesne->Bilgi();
+        echo $Nesne->Bilgi();  // JSPHP çıktısını verir.
 
         echo "<br/><br/><br/>";
         echo "*************************<br/><br/>";
