@@ -26,7 +26,7 @@
      */
 
      $Sonuc = new DenemeIki;
-     echo $Sonuc->Isim; // Isim değişkeni public olduğu için ekrana Şükrü yazar.
+     echo $Sonuc->Isim ; // Isim değişkeni public olduğu için ekrana Şükrü yazar.
     //  echo $Sonuc->SoyadVer(); // ekrana public fonksiyon sayesinde Kolay yazar.
     //echo $Sonuc->SoyIsim; // Özellik protected olduğu için hata verir. 
     
