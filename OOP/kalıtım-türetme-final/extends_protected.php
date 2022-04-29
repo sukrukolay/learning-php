@@ -29,5 +29,25 @@
      echo $Sonuc->Isim ; // Isim değişkeni public olduğu için ekrana Şükrü yazar.
     //  echo $Sonuc->SoyadVer(); // ekrana public fonksiyon sayesinde Kolay yazar.
     //echo $Sonuc->SoyIsim; // Özellik protected olduğu için hata verir. 
+
+
+    echo "<br/><br/>-----------------------------------<br/><br/>";
+    //protected kalıtım yoluyla türeyen sınıfta nasıl çalışır ? 
+
+    class OrnekBir
+    {
+        protected $Isim = "Şükrü";
+    }
+    class OrnekIki extends OrnekBir
+    {
+        // eğer miras alınan sınıftan protected bir metod veya özellik kullanılmak istenirse bu class içine dahil etmek zorundayız.
+        function Dondur()
+        {
+            return $this->Isim;
+        }
+    }
+
+    $Sonuc = new OrnekIki;
+    echo $Sonuc->Dondur();
     
 ?>
