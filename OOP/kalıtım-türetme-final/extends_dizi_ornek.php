@@ -32,6 +32,9 @@
             public function Deneme(){
                 return "İsmail";
             }
+            public function ParentininDegeriniDondur(){
+                return parent::Deneme(); // Muhammed değerini döndürür.
+            }
 
         }
 
@@ -46,9 +49,12 @@
             }
         }
 
-       $Sonuc = new Bes;
-       print_r($Sonuc->Dizi());
-
+        $Sonuc = new Bes;
+        print_r($Sonuc->Dizi()); // Hiyerarşideki bütün elemanları almak istersek bu şekilde dizi yardımıyla yapabiliriz.
+        echo "<br/><br/>----------------<br/><br/>";
+        $Sonuc2 = new Dort;
+        echo $Sonuc2->ParentininDegeriniDondur();
+                      
     ?>
 </body>
 </html>
