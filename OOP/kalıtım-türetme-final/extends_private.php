@@ -9,6 +9,6 @@
     }
 
 
-    $Sonuc = new DenemeIki;
-    echo $Sonuc->Isim; // Özellik private olduğu için hata verir.
+    $Sonuc1 = new DenemeIki;
+    echo $Sonuc1->Isim; // Özellik private olduğu için hata verir.
 ?>
