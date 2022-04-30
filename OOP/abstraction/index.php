@@ -30,13 +30,20 @@
         
         */
 
+        /*
+        abstract classlar genellikle kendisinden türeyen sınıflarda içerisinde bulunan metodun zorunlu olarak kullanılmasını sağlar. 
+        */
         abstract class Deneme{
-            abstract public function Tanim($ParametreIcerigi); // hata verir. Soyut sınıf içerisinde bulunan metodlar muhakkak soyut sınıftan türeyen alt sınıflarda da bulunmalıdır. 
+            abstract public function Tanim($ParametreIcerigi);  
 
         }
 
-        class Test extends Deneme{
+        class Test1 extends Deneme{
+            public function Tanim($ParametreIcerigi){} // hata olmaz çünkü abstract class'taki abstract metod burada tanımlandı ve kullanıldı.
+        }
 
+        class Test2 extends Deneme{
+            // hata verir. Soyut sınıf içerisinde bulunan metodlar muhakkak soyut sınıftan türeyen alt sınıflarda da bulunmalıdır.
         }
     ?>
 </body>
