@@ -11,12 +11,11 @@
         
         public $Isim    = "Şükrü";
         public $Soyisim = "Kolay";
-        //public const A  = "sabit"; // trait'leri class'lardan ayıran tek nokta. const tanımlanamaz, tanımlanırsa hata verir.
-
     }
 
     trait Bilgi{
 
+        use AdSoyad;
         public function Tanimlar(){
             $Metin = "Konya Teknik Üniversitesi";
             return $Metin;
