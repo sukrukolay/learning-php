@@ -23,7 +23,7 @@
 
     }
     class Deneme{
-        use AdSoyad, Bilgi; //birden fazla trait'in kullanılması.
+        use Bilgi; //tek bir trait ile çok trait kullanmak. Bilgi trait'i içerisindeki AdSoyad trait'ini dolaylı olarak çağırdık.
     }
 
     $Sonuc = new Deneme;
