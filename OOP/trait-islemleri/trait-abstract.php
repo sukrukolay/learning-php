@@ -12,5 +12,5 @@
     }
 
     $Sonuc = new Deneme;
-    echo $Sonuc->Goster(); // normalde private olduğu için hata verir fakat as kullanarak public yaptığımız için hatasız çalışır.
+    echo $Sonuc->Goster(); // trait içinde abstract class tanımlayıp kullanıldığı class'ta body'si yazılarak sorunsuz bir şekilde çalıştı.
 ?>
