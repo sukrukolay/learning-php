@@ -22,18 +22,7 @@
         $Iki     = new NK;
         echo $Iki->AdinNe()."<br/>";
 
-
-
-/*
-        $Bir = new SukrununSiniflari\Deneme; // namespace'leri çağırma. SukrununSiniflari namespace'i içerisinde bulunan Deneme class'ı
-        echo $Bir->AdinNe()."<br/>";
-
-        $Bir = new NurininSiniflari\Deneme; // namespace'leri çağırma. NurininSiniflari namespace'i içerisinde bulunan Deneme class'ı
-        echo $Bir->AdinNe()."<br/>";    
-        
-        $Bir = new MuhammedinSiniflari\Deneme; // namespace'leri çağırma. MuhammedinSiniflari namespace'i içerisinde bulunan Deneme class'ı
-        echo $Bir->AdinNe()."<br/>";
-*/      
+    
     ?>
 </body>
 </html>
