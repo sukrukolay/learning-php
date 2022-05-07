@@ -16,7 +16,7 @@
            /*
            setcookie("KullaniciAdi","Şükrü");
            setcookie("KullaniciSoyadi","Kolay");
-           setcookie("KullaniciEmail","deneme@gmail.com");
+           setcookie("Kullanicme@gmail.com");iEmail","dene
            setcookie("KullaniciSehir","Konya");
             */
 
