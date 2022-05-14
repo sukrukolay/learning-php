@@ -28,22 +28,42 @@
             die();
         }
         //kayitlar tablosunda bulunan değerleri $Sorgu değişkenine atadık. 
-        // PDO::FETCH_OBJ kullanılacaksa nesne gibi yazılmak zorundadır. Diğer türlü $Satirlar[0] veya $Satirlar["id"] vb gibi yazımlar hatalıdır.
-        $Sorgu  = $VeritabaniBaglantisi->query("SELECT * FROM kayitlar" , PDO::FETCH_OBJ); 
+        // fetch() metodunda kullanılan her şey burada da kullanılabilir fakat fetch' de tek kayıt geliyordu, burada birden fazla kayıt geleceği için dönü kullanmamız gereklidir.
+        $Sorgu  = $VeritabaniBaglantisi->query("SELECT * FROM kayitlar")->fetchAll(); 
         if($Sorgu){
             foreach ($Sorgu as $Satirlar) {
-                echo "ID                        : ".$Satirlar->id."<br/>";
-                echo "ADI SOYADI                : ".$Satirlar->adisoyadi."<br/>";
-                echo "YAŞ                       : ".$Satirlar->yas."<br/>";
-                echo "YAŞADIĞI ŞEHİR            : ".$Satirlar->sehir."<br/>";
-                echo "SİTEYE GİRİŞ SAYISI       : ".$Satirlar->siteyegirissayisi."<br/>";
-                echo "SİPARİŞ SAYISI            : ".$Satirlar->siparissayisi."<br/>";
-                echo "SİPARİŞ TOPLAM TUTARI     : ".$Satirlar->siparistoplamtutarlari."<br/><br/>";
+                echo "ID                        : ".$Satirlar["id"]."<br/>";
+                echo "ADI SOYADI                : ".$Satirlar["adisoyadi"]."<br/>";
+                echo "YAŞ                       : ".$Satirlar["yas"]."<br/>";
+                echo "YAŞADIĞI ŞEHİR            : ".$Satirlar["sehir"]."<br/>";
+                echo "SİTEYE GİRİŞ SAYISI       : ".$Satirlar["siteyegirissayisi"]."<br/>";
+                echo "SİPARİŞ SAYISI            : ".$Satirlar["siparissayisi"]."<br/>";
+                echo "SİPARİŞ TOPLAM TUTARI     : ".$Satirlar["siparistoplamtutarlari"]."<br/><br/>";
             }
         }
         else{
             echo "Sorgu Hatası.<br/>";
         }
+
+        /*
+        AŞAĞIDAKİ KULLANIM DA DOĞRUDU.
+        $Sorgu  = $VeritabaniBaglantisi->query("SELECT * FROM kayitlar")->fetchAll(PDO::FETCH_ASSOC); 
+        if($Sorgu){
+            foreach ($Sorgu as $Satirlar) {
+                echo "ID                        : ".$Satirlar["id"]."<br/>";
+                echo "ADI SOYADI                : ".$Satirlar["adisoyadi"]."<br/>";
+                echo "YAŞ                       : ".$Satirlar["yas"]."<br/>";
+                echo "YAŞADIĞI ŞEHİR            : ".$Satirlar["sehir"]."<br/>";
+                echo "SİTEYE GİRİŞ SAYISI       : ".$Satirlar["siteyegirissayisi"]."<br/>";
+                echo "SİPARİŞ SAYISI            : ".$Satirlar["siparissayisi"]."<br/>";
+                echo "SİPARİŞ TOPLAM TUTARI     : ".$Satirlar["siparistoplamtutarlari"]."<br/><br/>";
+            }
+        }
+        else{
+            echo "Sorgu Hatası.<br/>";
+        }
+
+        */
         $VeritabaniBaglantisi   = null;
 
         /*
@@ -63,10 +83,9 @@
         SİTEYE GİRİŞ SAYISI : 64
         SİPARİŞ SAYISI : 1
         SİPARİŞ TOPLAM TUTARI : 68000
-        ...
+        ... 
         .. 
         .
-
         */
     ?>
 </body>
