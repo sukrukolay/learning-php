@@ -56,17 +56,6 @@
         SİPARİŞ SAYISI : 3
         SİPARİŞ TOPLAM TUTARI : 4653
 
-        ID : 2
-        ADI SOYADI : Onur Tatlı
-        YAŞ : 35
-        YAŞADIĞI ŞEHİR : İstanbul
-        SİTEYE GİRİŞ SAYISI : 64
-        SİPARİŞ SAYISI : 1
-        SİPARİŞ TOPLAM TUTARI : 68000
-        ...
-        .. 
-        .
-
         */
     ?>
 </body>
