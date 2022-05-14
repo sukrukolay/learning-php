@@ -29,17 +29,17 @@
         }
         //kayitlar tablosunda bulunan değerleri $Sorgu değişkenine atadık. 
         // fetch() metodunda kullanılan her şey burada da kullanılabilir fakat fetch' de tek kayıt geliyordu, burada birden fazla kayıt geleceği için dönü kullanmamız gereklidir.
-        $Sorgu  = $VeritabaniBaglantisi->query("SELECT * FROM kayitlar");
+        $Sorgu  = $VeritabaniBaglantisi->query("SELECT * FROM kayitlar")->fetchAll(); 
         if($Sorgu){
-            
-            $SorguKaydi = $Sorgu->fetch(); 
-                echo "ID                        : ".$SorguKaydi["id"]."<br/>";
-                echo "ADI SOYADI                : ".$SorguKaydi["adisoyadi"]."<br/>";
-                echo "YAŞ                       : ".$SorguKaydi["yas"]."<br/>";
-                echo "YAŞADIĞI ŞEHİR            : ".$SorguKaydi["sehir"]."<br/>";
-                echo "SİTEYE GİRİŞ SAYISI       : ".$SorguKaydi["siteyegirissayisi"]."<br/>";
-                echo "SİPARİŞ SAYISI            : ".$SorguKaydi["siparissayisi"]."<br/>";
-                echo "SİPARİŞ TOPLAM TUTARI     : ".$SorguKaydi["siparistoplamtutarlari"]."<br/><br/>";
+            foreach ($Sorgu as $Satirlar) {
+                echo "ID                        : ".$Satirlar["id"]."<br/>";
+                echo "ADI SOYADI                : ".$Satirlar["adisoyadi"]."<br/>";
+                echo "YAŞ                       : ".$Satirlar["yas"]."<br/>";
+                echo "YAŞADIĞI ŞEHİR            : ".$Satirlar["sehir"]."<br/>";
+                echo "SİTEYE GİRİŞ SAYISI       : ".$Satirlar["siteyegirissayisi"]."<br/>";
+                echo "SİPARİŞ SAYISI            : ".$Satirlar["siparissayisi"]."<br/>";
+                echo "SİPARİŞ TOPLAM TUTARI     : ".$Satirlar["siparistoplamtutarlari"]."<br/><br/>";
+            }
         }
         else{
             echo "Sorgu Hatası.<br/>";
@@ -75,6 +75,17 @@
         SİTEYE GİRİŞ SAYISI : 147
         SİPARİŞ SAYISI : 3
         SİPARİŞ TOPLAM TUTARI : 4653
+
+        ID : 2
+        ADI SOYADI : Onur Tatlı
+        YAŞ : 35
+        YAŞADIĞI ŞEHİR : İstanbul
+        SİTEYE GİRİŞ SAYISI : 64
+        SİPARİŞ SAYISI : 1
+        SİPARİŞ TOPLAM TUTARI : 68000
+        ... 
+        .. 
+        .
         */
     ?>
 </body>
