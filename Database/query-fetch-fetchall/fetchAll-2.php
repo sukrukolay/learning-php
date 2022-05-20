@@ -29,9 +29,10 @@
         }
         //kayitlar tablosunda bulunan değerleri $Sorgu değişkenine atadık. 
         // fetch() metodunda kullanılan her şey burada da kullanılabilir fakat fetch' de tek kayıt geliyordu, burada birden fazla kayıt geleceği için dönü kullanmamız gereklidir.
-        $Sorgu  = $VeritabaniBaglantisi->query("SELECT * FROM kayitlar")->fetchAll(); 
+        $Sorgu  = $VeritabaniBaglantisi->query("SELECT * FROM kayitlar"); 
         if($Sorgu){
-            foreach ($Sorgu as $Satirlar) {
+            $SorguKaydi = $Sorgu->fetchAll();
+            foreach ($SorguKaydi as $Satirlar) {
                 echo "ID                        : ".$Satirlar["id"]."<br/>";
                 echo "ADI SOYADI                : ".$Satirlar["adisoyadi"]."<br/>";
                 echo "YAŞ                       : ".$Satirlar["yas"]."<br/>";
