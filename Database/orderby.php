@@ -31,7 +31,7 @@
                 echo "Kullanıcı Yaşadığı Şehir: ".$Satirlar["sehir"]."<br>";
                 echo "Kullanıcı Siteye Giriş Sayısı: ".$Satirlar["siteyegirissayisi"]."<br>";
                 echo "Kullanıcı Sipariş Sayısı: ".$Satirlar["siparissayisi"]."<br>";
-                echo "Kullanıcı Sipariş Toplam Tutarı: ".$Satirlar["siparistoplamtutarlari"]."<br><br/>";
+                echo "Kullanıcı Sipariş Toplam Tutarı: ".$Satirlar["siparistoplamtutarlari"]."<br/><br/>";
 
             }
         }
