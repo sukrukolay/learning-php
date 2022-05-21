@@ -60,6 +60,30 @@
 
 
     $VeriTabaniBaglantisi   = null;
+
+    /*
+    Ekran Çıktısı:
+    İstanbul
+    Volkan Alakent
+    Onur Tatlı
+    Aslı Tatlı
+        
+    Ankara
+    Hakan Alakent
+        
+    İzmir
+    Ümit Okudan
+    Cengiz Kurtuluş
+    Levent Çelik
+    Osman Şahin
+        
+    Kocaeli
+    Serkan Çelik
+        
+    Trabzon
+    Yusuf Türk
+
+    */
     ?>
 </body>
 </html>
