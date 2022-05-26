@@ -38,7 +38,7 @@
     ?>
 
     <form action="sonuc.php" method=post>
-    <input type="hidden" name="KayitIDsi" value="<?php echo GelenID;?>">
+    <input type="hidden" name="KayitIDsi" value="<?php echo $GelenID;?>">
     İsim : <input type="text" name="isim" value="<?php echo $KaydinIsimDegeri; ?>"><br/>
     Yaş : <input type="text" name="yas" value="<?php echo $KaydinYasDegeri; ?>"><br/>
     Şehir : <input type="text" name="sehir" value="<?php echo $KaydinSehirDegeri; ?>"><br/>
